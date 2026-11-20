@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Student Management System</h1>
+            <p>Manage your student records easily</p>
+        </header>
+
+        <section class="form-section">
+            <h2 id="formTitle">Register New Student</h2>
+
+            <form id="studentForm">
+                <input type="hidden" id="editIndex">
+
+                <input type="text" id="name"
+                    placeholder="Full Name" required>
+
+                <input type="text" id="matric"
+                    placeholder="Matric Number" required>
+
+                <input type="email" id="email"
+                    placeholder="Email Address" required>
+
+                <select id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+
+                <input type="text" id="department"
+                    placeholder="Department" required>
+
+                <select id="level" required>
+                    <option value="">Select Level</option>
+                    <option>100 Level</option>
+                    <option>200 Level</option>
+                    <option>300 Level</option>
+                    <option>400 Level</option>
+                    <option>500 Level</option>
+                </select>
+
+                <button type="submit" id="submitBtn">
+                    Register Student
+                </button>
+            </form>
+        </section>
+
+        <section class="students-section">
+            <h2>Registered Students</h2>
+
+            <input type="text" id="search"
+                placeholder="Search by name or matric number...">
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Matric Number</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Department</th>
+                            <th>Level</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentList"></tbody>
+                </table>
+            </div>
+
+            <p id="totalStudents">Total Students: 0</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
